@@ -19,31 +19,31 @@ const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
  * Each category is object with `name` and `img`.
  */
 const lockImg = 'img/lock.png';
-const fnctLogo = 'img/functionLogo.svg';
+const functionLogo = 'img/functionLogo.svg';
 
 const catSkills = [
   {
-    img: fnctLogo,
+    img: functionLogo,
     score: 0,
     name: 'functions',
   },
   {
-    img: fnctLogo,
+    img: lockImg,
     score: 0,
     name: 'functions',
   },
   {
-    img: fnctLogo,
+    img: functionLogo,
     score: 0,
     name: 'functions',
   },
   {
-    img: fnctLogo,
+    img: functionLogo,
     score: 0,
     name: 'functions',
   },
   {
-    img: fnctLogo,
+    img: lockImg,
     score: 0,
     name: 'functions',
   },
