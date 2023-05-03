@@ -42,7 +42,7 @@ const categories = [
  */
 function appendCategory(category, index) {
   // set background img size for each category
-  const imgSize = 250;
+  const imgSize = 200;
   // horizontal space between categories
   const margin = 50;
 

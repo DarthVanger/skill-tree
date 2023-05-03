@@ -22,7 +22,7 @@ export function CategoryName({ x, y, imgSize, category }) {
   categoryNameEl.setAttribute('y', textY);
 
   // set size, color
-  categoryNameEl.setAttribute('font-size', '60');
+  categoryNameEl.setAttribute('font-size', '40');
   categoryNameEl.setAttribute('fill', 'yellowgreen');
   categoryNameEl.setAttribute('stroke', 'black');
   categoryNameEl.setAttribute('stroke-width', '2');
