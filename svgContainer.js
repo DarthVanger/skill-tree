@@ -55,7 +55,7 @@ function appendCategory(category, catagoryIndex) {
   
   // x, y of the category background img
   const catagoryBackgroundX = catagoryIndex * (imgSize + margin);
-  const y = 0;
+  const catagoryBackgroundY = 0;
   
   // set lock img size for each lock
   const lockimgSize = 39;
@@ -63,8 +63,8 @@ function appendCategory(category, catagoryIndex) {
   const lockMargin = 1;
   
   // create svg img and svg text elements
-  const categoryBackground = CategoryBackground({ x: catagoryBackgroundX, y, imgSize, category });
-  const categoryNameEl = CategoryName({ x: catagoryBackgroundX, y, imgSize, category });
+  const categoryBackground = CategoryBackground({ x: catagoryBackgroundX, y: catagoryBackgroundY, imgSize, category });
+  const categoryNameEl = CategoryName({ x: catagoryBackgroundX, y: catagoryBackgroundY, imgSize, category });
   
   // append svg img and svg text elements
   svgElement.append(categoryBackground);
