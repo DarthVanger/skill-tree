@@ -18,7 +18,37 @@ const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
  * Array of categories of skills.
  * Each category is object with `name` and `img`.
  */
-const catSkills = ['img/lock.png','img/lock.png','img/lock.png','img/lock.png','img/lock.png'];
+const lockImg = 'img/lock.png';
+const fnctLogo = 'img/functionLogo.svg';
+
+const catSkills = [
+  {
+    img: fnctLogo,
+    score: 0,
+    name: 'functions',
+  },
+  {
+    img: fnctLogo,
+    score: 0,
+    name: 'functions',
+  },
+  {
+    img: fnctLogo,
+    score: 0,
+    name: 'functions',
+  },
+  {
+    img: fnctLogo,
+    score: 0,
+    name: 'functions',
+  },
+  {
+    img: fnctLogo,
+    score: 0,
+    name: 'functions',
+  },
+]
+
 
 const categories = [
   {
@@ -50,6 +80,7 @@ const categories = [
 function appendCategory(category, catagoryIndex) {
   // set background img size for each category
   const backgroundImgSize = 200;
+  console.log('appendCatagory', category.name, catagoryIndex);
   // horizontal space between categories
   const backgroundMargin = 50;
   
@@ -73,6 +104,8 @@ function appendCategory(category, catagoryIndex) {
   category.skills.forEach(veiwSkill);
 
   function veiwSkill (skill,skillindex) {
+  console.log('viewSkills', skill, skillindex);
+
     const lockX = skillindex * ( lockImgSize + lockMargin) + catagoryBackgroundX ;
     const lockY = 145;
     const lockScreenImg = LockScreenImg({ lockX,lockY,lockimgSize: lockImgSize, skill });
