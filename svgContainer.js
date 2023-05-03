@@ -80,7 +80,6 @@ const categories = [
 function appendCategory(category, catagoryIndex) {
   // set background img size for each category
   const backgroundImgSize = 200;
-  console.log('appendCatagory', category.name, catagoryIndex);
   // horizontal space between categories
   const backgroundMargin = 50;
   
@@ -104,8 +103,6 @@ function appendCategory(category, catagoryIndex) {
   category.skills.forEach(veiwSkill);
 
   function veiwSkill (skill,skillindex) {
-  console.log('viewSkills', skill, skillindex);
-
     const lockX = skillindex * ( lockImgSize + lockMargin) + catagoryBackgroundX ;
     const lockY = 145;
     const lockScreenImg = LockScreenImg({ lockX,lockY,lockimgSize: lockImgSize, skill });
