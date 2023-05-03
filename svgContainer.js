@@ -49,22 +49,22 @@ const categories = [
  */
 function appendCategory(category, catagoryIndex) {
   // set background img size for each category
-  const imgSize = 200;
+  const backgroundImgSize = 200;
   // horizontal space between categories
-  const margin = 50;
+  const backgroundMargin = 50;
   
   // x, y of the category background img
-  const catagoryBackgroundX = catagoryIndex * (imgSize + margin);
+  const catagoryBackgroundX = catagoryIndex * (backgroundImgSize + backgroundMargin);
   const catagoryBackgroundY = 0;
   
   // set lock img size for each lock
-  const lockimgSize = 39;
+  const lockImgSize = 39;
   // horizontal space between locks
   const lockMargin = 1;
   
   // create svg img and svg text elements
-  const categoryBackground = CategoryBackground({ x: catagoryBackgroundX, y: catagoryBackgroundY, imgSize, category });
-  const categoryNameEl = CategoryName({ x: catagoryBackgroundX, y: catagoryBackgroundY, imgSize, category });
+  const categoryBackground = CategoryBackground({ x: catagoryBackgroundX, y: catagoryBackgroundY, imgSize: backgroundImgSize, category });
+  const categoryNameEl = CategoryName({ x: catagoryBackgroundX, y: catagoryBackgroundY, imgSize: backgroundImgSize, category });
   
   // append svg img and svg text elements
   svgElement.append(categoryBackground);
@@ -73,9 +73,9 @@ function appendCategory(category, catagoryIndex) {
   category.skills.forEach(veiwSkill);
 
   function veiwSkill (skill,skillindex) {
-    let lockX = skillindex * ( lockimgSize + lockMargin) + catagoryBackgroundX ;
+    const lockX = skillindex * ( lockImgSize + lockMargin) + catagoryBackgroundX ;
     const lockY = 145;
-    const lockScreenImg = LockScreenImg({ lockX,lockY,lockimgSize, skill });
+    const lockScreenImg = LockScreenImg({ lockX,lockY,lockimgSize: lockImgSize, skill });
     svgElement.append(lockScreenImg);
  }
 }
